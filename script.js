@@ -1,6 +1,7 @@
 
 var myGamePiece;
-var missed = []
+var mousex;
+var mousey
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
     myGameArea.start();
@@ -10,8 +11,8 @@ var myGameArea = {
 
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = dimension[0];
-        this.canvas.height = dimension[1];
+        this.canvas.width = dimension[0] - 300;
+        this.canvas.height = dimension[1] - 100;
         this.canvas.onmousemove = handleMouseMove
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -38,6 +39,7 @@ function component(width, height, color, x, y) {
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
     this.newPos = function() {
+      if((this.x - mousex)**2 + (this.y - mousey)**2 < 200){console.log('hit')}
       if(this.x < 0 || this.x > myGameArea.canvas.width){
         this.speedX *= -1
       }
@@ -49,7 +51,7 @@ function component(width, height, color, x, y) {
     }
 }
 function updateDirection(){
-  console.log(missed)
+  // console.log(missed)
   num = Math.random() * 2 + 2
   num2 = Math.random() * 2 + 2
   num *=  Math.floor(Math.random()*2) == 1 ? 1 : -1;
@@ -88,5 +90,6 @@ function run(){
   myGamePiece.speedY = num2
 }
 function handleMouseMove(event) {
-      missed.push((myGamePiece.x + 15) - event.clientX)
+      mousex =  event.clientX;
+      mousey = event.clientY;
 }

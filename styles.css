@@ -5,3 +5,6 @@
   border-radius: 50%;
   background: gray;
 }
+canvas{
+  margin-left: 0 auto;
+}
