@@ -5,9 +5,16 @@
 <link rel='stylesheet' href='styles.css'>
 </head>
 <!-- Start of page content -->
-<body onload="startGame()">
-
-
+<body >
+<button onclick="startGame()">start</button>
+  <div style='display: none'>
+  <audio controls id='audio-low'>
+    <source src="beep-2.wav" type="audio/mpeg">
+  </audio>
+  <audio controls id='audio-high'>
+    <source src="beep-3.wav" type="audio/mpeg">
+  </audio>
+</div>
   <script src='script.js'></script>
 </body>
 </html>
