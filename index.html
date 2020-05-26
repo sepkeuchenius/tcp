@@ -5,8 +5,10 @@
 <link rel='stylesheet' href='styles.css'>
 </head>
 <!-- Start of page content -->
-<body >
-<button onclick="startGame()">start</button>
+<body>
+  <button onclick="startSound()">Geluid Trial</button>
+  <button onclick="startMouse()">Muis Trial</button>
+  <button onclick="startBoth()">Eggie</button>
   <div style='display: none'>
   <audio controls id='audio-low'>
     <source src="beep-2.wav" type="audio/mpeg">
@@ -15,6 +17,9 @@
     <source src="beep-3.wav" type="audio/mpeg">
   </audio>
 </div>
+<div id='mouse_output'></div>
+-------
+<div id='click_output'></div>
   <script src='script.js'></script>
 </body>
 </html>
