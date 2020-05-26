@@ -32,7 +32,7 @@ function startSound(){
   document.getElementById('click_output').innerText = ''
   document.getElementById('click_output').innerText = buildCSV(c)
   start = false;
-},10000)
+},60000)
 }
 
 function startBoth() {
@@ -57,7 +57,7 @@ function startBoth() {
       document.getElementById('click_output').innerText = buildCSV(c)
 
       start = false
-    },10000)
+    },60000)
 }
 function startMouse(){
     t = 0
@@ -79,7 +79,7 @@ function startMouse(){
      document.getElementById('click_output').innerText = ''
      document.getElementById('output_mouse').innerText = buildCSV(mouseLog)
      start = false
-   },10000)
+   },60000)
 }
 var dimension = [document.documentElement.clientWidth, document.documentElement.clientHeight];
 var myGameArea = {
