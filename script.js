@@ -77,7 +77,7 @@ function startMouse(){
      myGameArea.canvas.remove()
      document.getElementById('mouse_output').innerText = ''
      document.getElementById('click_output').innerText = ''
-     document.getElementById('output_mouse').innerText = buildCSV(mouseLog)
+     document.getElementById('mouse_output').innerText = buildCSV(mouseLog)
      start = false
    },60000)
 }
@@ -142,7 +142,7 @@ var e = [1,0]
 // At these seconds, the direction is switched either north (n), south (s), west (w), east (e).
 var directionUpdates = {
   1: s,
-  3: e,
+  3: w,
   5: n,
   7: w,
   9: s,
@@ -150,7 +150,7 @@ var directionUpdates = {
   12: s,
   14: e,
   17: n,
-  19: e,
+  19: w,
   20: n,
   21:e,
   23:w,
