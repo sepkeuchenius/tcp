@@ -3,6 +3,11 @@ var myGamePiece;
 var mousex;
 var mousey
 document.addEventListener('click', click)
+function hide(){
+  document.getElementById('instructies').style.display = 'none'
+
+
+}
 function startSound(){
   c = ['c']
   start = true
